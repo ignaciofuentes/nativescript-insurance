@@ -1,3 +1,67 @@
-page {
-    /* CSS styles */
+﻿ActionBar {
+    background-color:white;
+}
+ ListView {
+     separator-color: white;
+}
+.title {
+    color: #5c666f;
+    margin-left:44;
+    margin-right:44;
+}
+.white {
+    color:white;
+}
+.normal-text {
+    font-size:20;
+}
+.line {
+    background-color: #DBDBDB;
+    height: 1;
+}
+
+.complete-bar {
+    background-color: #BEC2C5;
+    height: 4;
+}
+
+.progress-bar {
+    background-color: #00caab;
+    height: 4;
+}
+
+.placeholder {
+    color:#b9bcbf
+}
+
+.invisible {
+    visibility: collapse;
+}
+.passive {
+    color:#5c666f;
+}
+
+.next-button {
+    margin:44;
+    height:44;
+    border-radius:22;
+    color:#ffffff;
+    background-color:#00caab;
+    font-size:20;
+}
+
+.disabled {
+    color:#a4a4a4;
+    background-color:#E1E1E1;
+}
+
+.start-over {
+    color:#00caab;
+    background-color:white;
+}
+
+.step {
+    margin:10;
+    color:#00caab;
+    font-size:15
 }
