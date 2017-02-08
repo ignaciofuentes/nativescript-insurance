@@ -1,0 +1,19 @@
+<ActionBar>
+    <NavigationButton text="" icon="res://ic_arrow_back"></NavigationButton>
+</ActionBar>
+<GridLayout rows="auto, auto, *">
+    <header [firstText]="firstText" [secondText]="secondText"></header>    
+    <StackLayout row="1" style="margin-top:46;">
+        <GridLayout columns="44, *,44" (tap)="onTap(option)" height="48" *ngFor="let option of options | async">
+            <StackLayout colSpan="3" verticalAlignment="top" class="line"></StackLayout>      
+            <Image width="20" col="0" src="res://ic_selected" *ngIf="isSelected(option)"></Image>
+            <Label col="1" [text]="option" class="normal-text" [class.passive]="!isSelected(option)"></Label>
+            <Image width="20" col="2" src="res://ic_info"></Image>
+        </GridLayout>
+    </StackLayout>
+    <StackLayout row="1" verticalAlignment="bottom" class="line"></StackLayout>
+    <GridLayout row="2">
+        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" (tap)="goToState()" verticalAlignment="bottom" text="Get a quote" class="next-button"></Button>
+    </GridLayout>
+    <progress-bar [step]="5"></progress-bar>
+</GridLayout>

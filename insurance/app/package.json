@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "nativescript": {
+    "id": "org.nativescript.helloworldng"
+  },
+  "name": "tns-template-hello-world-ng",
+  "main": "main.js",
+  "version": "2.1.2",
+  "author": {
+    "name": "Telerik",
+    "email": "support@telerik.com"
+  },
+  "description": "Nativescript Angular Hello World template",
+  "license": "BSD",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "angular",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NativeScript/template-hello-world-ng.git"
+  },
+  "homepage": "https://github.com/NativeScript/template-hello-world-ng",
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.3",
+    "@angular/compiler": "2.0.0-rc.3",
+    "@angular/core": "2.0.0-rc.3",
+    "@angular/http": "2.0.0-rc.3",
+    "@angular/platform-browser": "2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.3",
+    "@angular/platform-server": "2.0.0-rc.3",
+    "@angular/router": "3.0.0-alpha.7",
+    "@angular/router-deprecated": "2.0.0-rc.2",
+    "nativescript-angular": "0.2.0",
+    "tns-core-modules": "^2.1.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.2"
+  },
+  "gitHead": "19d7566ba2bb2f677047f7aca7428b7a6d177175",
+  "bugs": {
+    "url": "https://github.com/NativeScript/template-hello-world-ng/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "tns-template-hello-world-ng@2.1.2",
+  "_shasum": "2c4a64c22cd77da9e7ad9ba2f37e85d5871b9f90",
+  "_from": "git+https://github.com/NativeScript/template-hello-world-ng.git",
+  "_resolved": "git+https://github.com/NativeScript/template-hello-world-ng.git#19d7566ba2bb2f677047f7aca7428b7a6d177175"
+}

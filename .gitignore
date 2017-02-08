@@ -10,8 +10,8 @@ typings
 .tscache
 
 .vscode/
-nativescript-insurance/app/**/*.js
-nativescript-insurance/app/**/*.map
+insurance/app/**/*.js
+insurance/app/**/*.map
 platforms
 lib
 
