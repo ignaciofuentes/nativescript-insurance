@@ -3,7 +3,7 @@ import {carData} from "./car-data";
 import { Observable } from "rxjs/observable";
 import {request} from "http";
 @Injectable()
-export class CorticonService {
+export class DataService {
 
   selectedInsuranceType:string;
   selectedState:string;

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { CorticonService } from "../../../shared/app-data.service";
+import { DataService } from "../../../shared/app-data.service";
 import { TitleText } from "../../../shared/header.component";
 
 @Component({
@@ -20,7 +20,7 @@ export class YearsComponent {
     options: Promise<number[]>;
     firstText: TitleText = {text:"Years",bold:true};
 
-    constructor(private service: CorticonService) {
+    constructor(private service: DataService) {
         this.options = service.years;
     }
 

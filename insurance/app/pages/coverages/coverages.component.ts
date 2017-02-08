@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { CorticonService } from "../../shared/app-data.service";
+import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
 import { RouterExtensions } from "nativescript-angular/router";
 
@@ -12,7 +12,7 @@ export class CoveragesComponent {
     firstText: TitleText = {text:"Coverage",bold:true};
     secondText: TitleText = {text:"type",bold:false};
 
-    constructor(private _router: RouterExtensions, private service: CorticonService) {
+    constructor(private _router: RouterExtensions, private service: DataService) {
         this.options = this.service.coverages;
         
     }

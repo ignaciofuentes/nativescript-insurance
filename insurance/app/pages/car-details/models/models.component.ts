@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { CorticonService} from "../../../shared/app-data.service";
+import { DataService} from "../../../shared/app-data.service";
 import { TitleText } from "../../../shared/header.component";
 
 @Component({
@@ -20,7 +20,7 @@ export class ModelsComponent{
     options: Promise<string[]>;
     firstText: TitleText = {text:"Models",bold:true};
 
-    constructor(private service: CorticonService) {
+    constructor(private service: DataService) {
         this.options = service.models;
     }
 

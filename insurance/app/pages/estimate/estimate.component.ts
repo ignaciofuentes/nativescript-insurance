@@ -1,7 +1,7 @@
 import {Component } from "@angular/core";
 import {Router} from "@angular/router"
 import {Page} from "ui/page";
-import {CorticonService} from "../../shared/app-data.service";
+import {DataService} from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
 import { RouterExtensions } from "nativescript-angular/router";
 
@@ -29,7 +29,7 @@ export class EstimateComponent  {
 
     estimateValue:Promise<number>;
 
-    constructor(private _router: RouterExtensions,private page: Page, private service: CorticonService) {
+    constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
         this.page.backgroundSpanUnderStatusBar = true;
         this.page.actionBarHidden=true;
         this.estimateValue = service.getEstimate();

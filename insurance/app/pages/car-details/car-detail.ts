@@ -1,4 +1,5 @@
 import { Component, Input, Output, ElementRef, EventEmitter, ViewChild } from "@angular/core";
+import { RouterExtensions } from "nativescript-angular/router";
 @Component({
     template: `
     <GridLayout rows="auto, *,auto">
@@ -26,6 +27,9 @@ export class CarDetail   {
     @Output() onItemTap = new EventEmitter<string>();
     @ViewChild('listview') private lv: ElementRef;
 
+    constructor(private _router: RouterExtensions) {        
+    }
+
     isSelected(item){
         return this.selectedOption == item;
     }
@@ -35,7 +39,7 @@ export class CarDetail   {
         this.options.then(items => {
             this.onItemTap.emit(items[args.index]);
             listview.refresh();
-        })
-        
+            this._router.back();
+        });
     }
 }

@@ -15,7 +15,7 @@ import { YearsComponent } from "./pages/car-details/years/years.component";
 import { PersonalDetailsComponent } from "./pages/personal-details/personal-details.component";
 import { CoveragesComponent } from "./pages/coverages/coverages.component";
 import { EstimateComponent } from "./pages/estimate/estimate.component";
-import { CorticonService } from "./shared/app-data.service";
+import { DataService } from "./shared/app-data.service";
 import { ProgressBar } from "./shared/progress-bar";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
@@ -43,7 +43,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
   ],
   providers: [
-    CorticonService
+    DataService
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]

@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from "@angular/core";
 import { TextField } from "ui/text-field";
-import { CorticonService } from "../../shared/app-data.service";
+import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
 import { RouterExtensions } from "nativescript-angular/router";
 
@@ -13,7 +13,7 @@ export class PersonalDetailsComponent {
     firstText: TitleText = {text:"Your",bold:true};
     secondText: TitleText = {text:"details",bold:false};
 
-    constructor(private _router: RouterExtensions, private service: CorticonService) {
+    constructor(private _router: RouterExtensions, private service: DataService) {
     }
     
     onTap(myParam) {

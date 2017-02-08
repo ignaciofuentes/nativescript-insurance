@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Page } from "ui/page";
-import { CorticonService } from "../../shared/app-data.service";
+import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
 import { RouterExtensions } from "nativescript-angular/router";
 
@@ -12,7 +12,7 @@ export class CarDetailsComponent {
     firstText: TitleText = {text:"Car",bold:true};
     secondText: TitleText = {text:"details",bold:false};
     
-    constructor(private _router: RouterExtensions,private page: Page, private service: CorticonService) {
+    constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
         //this.page.actionBarHidden = true;
     }
 

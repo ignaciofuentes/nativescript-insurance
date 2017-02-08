@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Page } from "ui/page";
 import { topmost } from "ui/frame";
-import { CorticonService } from "../../shared/app-data.service";
+import { DataService } from "../../shared/app-data.service";
 import { RouterExtensions } from "nativescript-angular/router";
 import { TitleText } from "../../shared/header.component";
 @Component({
@@ -14,12 +14,14 @@ export class HomePageComponent  {
     firstText: TitleText = {text:"What",bold:true};
     secondText: TitleText = {text:"kind of insurance do you need?",bold:false};
 
-    constructor(private _router: RouterExtensions,private page: Page, private service: CorticonService) {
-        var controller = topmost().ios.controller;
-        var navBar = controller.navigationBar;
-        navBar.barStyle = UIBarStyle.UIBarStyleBlackTranslucent;
-        this.options = this.service.insuranceTypes;
-        this.page.actionBarHidden = true;
+    constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
+        if(page.ios){
+            var controller = topmost().ios.controller;
+            var navBar = controller.navigationBar;
+            navBar.barStyle = UIBarStyle.BlackTranslucent;
+            this.options = this.service.insuranceTypes;
+            this.page.actionBarHidden = true;
+        }
     }
 
     isSelected(option){
