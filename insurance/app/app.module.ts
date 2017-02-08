@@ -23,6 +23,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 @NgModule({
   imports: [
     NativeScriptModule,
+    NativeScriptFormsModule,
     AppRoutingModule
   ],
   declarations: [
