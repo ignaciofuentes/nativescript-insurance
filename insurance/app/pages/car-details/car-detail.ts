@@ -9,7 +9,7 @@ import { RouterExtensions } from "nativescript-angular/router";
                 <template let-item="item">
                     <GridLayout columns="44, *" height="48">
                         <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-                        <Image width="20" col="0" row="0" src="res://ic_selected" *ngIf="isSelected(item)"></Image>
+                        <Label width="20" col="0" row="0" text="&#xf05d;" class="font-awesome check" *ngIf="isSelected(item)"></Label>
                         <Label col="1" [text]="item" style="font-size:20" [class.passive]="!isSelected(item)"></Label>
                     </GridLayout>
                 </template>

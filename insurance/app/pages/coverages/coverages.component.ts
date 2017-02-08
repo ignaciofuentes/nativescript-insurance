@@ -37,6 +37,10 @@ export class CoveragesComponent {
         }
     }
 
+    onInfoTap(myParam) {
+        alert("Info");
+    }
+
     goToState(){        
        this._router.navigate(["/estimate"], {clearHistory:true});
     }

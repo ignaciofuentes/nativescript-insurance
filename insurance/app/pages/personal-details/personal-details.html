@@ -23,12 +23,12 @@
         
         <GridLayout columns="*,1,*" height="48">
             <GridLayout col="0" columns="44,*" (tap)="onTap('female')">
-                <Image width="20" src="res://ic_selected" *ngIf="isSelected('female')"></Image>
+                <Label width="20" text="&#xf05d;" class="font-awesome check" *ngIf="isSelected('female')"></Label>
                 <Label col="1" text="Female" class="normal-text" [class.passive]="!isSelected('female')"></Label>
             </GridLayout>
             <StackLayout col="1" backgroundColor="#DBDBDB"></StackLayout>  
             <GridLayout col="2" columns="44,*" (tap)="onTap('male')">
-                <Image width="20" src="res://ic_selected" *ngIf="isSelected('male')"></Image>
+                <Label width="20" text="&#xf05d;" class="font-awesome check" *ngIf="isSelected('male')"></Label>
                 <Label col="1" text="Male" class="normal-text" [class.passive]="!isSelected('male')"></Label>
             </GridLayout>       
         </GridLayout>

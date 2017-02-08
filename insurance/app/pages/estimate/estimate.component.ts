@@ -30,8 +30,8 @@ export class EstimateComponent  {
     estimateValue:Promise<number>;
 
     constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
-        this.page.backgroundSpanUnderStatusBar = true;
-        this.page.actionBarHidden=true;
+        //this.page.backgroundSpanUnderStatusBar = true;
+        //this.page.actionBarHidden=true;
         this.estimateValue = service.getEstimate();
     }
 

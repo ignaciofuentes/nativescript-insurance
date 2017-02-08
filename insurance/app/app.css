@@ -65,3 +65,21 @@
     color:#00caab;
     font-size:15
 }
+
+.font-awesome {
+    font-family: "FontAwesome";   
+}
+
+.check {
+    color:#00caab;
+    font-size:22;
+}
+
+.arrow {
+    color:#00caab;
+    font-size:30;
+}
+.info {
+    color:#00caab;
+    font-size:18;
+}

@@ -19,7 +19,7 @@ export class CarDetailsComponent {
     get canProceed(){
         if(this.service.selectedMake && this.service.selectedModel && this.service.selectedYear)
             return true;
-        return false;
+        return true;
     }
 
     get selectedMake(){
