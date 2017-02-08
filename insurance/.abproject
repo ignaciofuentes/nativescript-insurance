@@ -1,0 +1,28 @@
+{
+  "ProjectName": "insurance",
+  "ProjectGuid": "8154fa56-8ea0-4a90-98d5-9c5a514be7b0",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.nativescriptinsurance",
+  "DisplayName": "nativescript-insurance",
+  "Author": "",
+  "Description": "nativescript-insurance",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "2.5.0",
+  "Framework": "NativeScript"
+}
