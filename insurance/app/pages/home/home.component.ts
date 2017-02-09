@@ -5,7 +5,6 @@ import { DataService } from "../../shared/app-data.service";
 import { RouterExtensions } from "nativescript-angular/router";
 import { TitleText } from "../../shared/header.component";
 @Component({
-    styles: ['.action-bar {background-color:white;}'],
     templateUrl: "pages/home/home.html"
 })
 export class HomePageComponent  {
