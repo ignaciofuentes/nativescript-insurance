@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {carData} from "./car-data";
-import { Observable } from "rxjs/observable";
-import {request} from "http";
+import { Observable, Observer } from "rxjs";
+import 'rxjs/add/operator/map';
+import {Http} from '@angular/http';
 @Injectable()
 export class DataService {
 
@@ -15,15 +16,20 @@ export class DataService {
   private _selectedModel:string;
   private _selectedYear:number;
 
-  constructor() {
+  constructor(private http: Http) {
     this.clearAll();
   }
   
   
-  states: string[] = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
-  get insuranceTypes() : Promise<string[]>{
-    return new Promise((r)=>{r(["Car","Life","Home","Renters","Health"])});
+
+  get states() {
+      return ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+  }
+
+  get insuranceTypes():Observable<string[]>{
+      return this.http.get("https://api.everlive.com/v1/xf06ngg5dllbzj9c/insuranceTypes")
+              .map(r => r.json().Result.map(item => item.Name));
   }
 
   get makes() : Promise<string[]>{

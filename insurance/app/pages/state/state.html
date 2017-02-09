@@ -5,7 +5,7 @@
     <header [firstText]="firstText" [secondText]="secondText"></header>
     <StackLayout row="1" style="margin-top:46;">
         <StackLayout class="line"></StackLayout>      
-        <ListView #listview [items]="options" separatorColor="red" (itemTap)="onItemTap($event)">
+        <ListView #listview [items]="options" (itemTap)="onItemTap($event)">
             <template let-item="item">
                 <GridLayout columns="44, *" height="48">
                     <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>

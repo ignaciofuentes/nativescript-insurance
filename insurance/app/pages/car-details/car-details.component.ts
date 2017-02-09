@@ -13,7 +13,6 @@ export class CarDetailsComponent {
     secondText: TitleText = {text:"details",bold:false};
     
     constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
-        //this.page.actionBarHidden = true;
     }
 
     get canProceed(){

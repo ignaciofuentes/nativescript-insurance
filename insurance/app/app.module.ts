@@ -18,12 +18,15 @@ import { EstimateComponent } from "./pages/estimate/estimate.component";
 import { DataService } from "./shared/app-data.service";
 import { ProgressBar } from "./shared/progress-bar";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptHttpModule } from "nativescript-angular/http";
+
 
 
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
+    NativeScriptHttpModule,
     AppRoutingModule
   ],
   declarations: [
