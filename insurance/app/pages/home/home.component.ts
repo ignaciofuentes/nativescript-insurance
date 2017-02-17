@@ -18,9 +18,9 @@ export class HomePageComponent  {
         if(page.ios){
             var controller = topmost().ios.controller;
             var navBar = controller.navigationBar;
-            navBar.barStyle = UIBarStyle.BlackTranslucent;            
-            //this.page.actionBarHidden = true;
+            navBar.barStyle = UIBarStyle.BlackOpaque;
         }
+        var x =0;
         this.options = this.service.insuranceTypes;
     }
 
