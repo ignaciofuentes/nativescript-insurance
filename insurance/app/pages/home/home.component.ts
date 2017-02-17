@@ -20,7 +20,6 @@ export class HomePageComponent  {
             var navBar = controller.navigationBar;
             navBar.barStyle = UIBarStyle.BlackOpaque;
         }
-        var x =0;
         this.options = this.service.insuranceTypes;
     }
 
