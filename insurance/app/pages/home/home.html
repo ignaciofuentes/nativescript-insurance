@@ -1,10 +1,10 @@
-<GridLayout rows="auto, auto, *" style="margin-top:56">
+<GridLayout rows="auto, auto, *" style="margin-top:46">
     <header [firstText]="firstText" [secondText]="secondText"></header>    
     <StackLayout row="1" style="margin-top:46;">
         <GridLayout columns="44, *" (tap)="onTap(option)" height="48" *ngFor="let option of options | async">
             <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-            <Label width="20" col="0" row="0" text="&#xf05d;" class="font-awesome check" [class.invisible]="!isSelected(option)"></Label>
-            <Label col="1" [text]="option" class="normal-text" [class.passive]="!isSelected(option)"></Label>
+            <Label verticalAlignment="center" width="20" col="0" row="0" text="&#xf05d;" class="font-awesome check" [class.invisible]="!isSelected(option)"></Label>
+            <Label verticalAlignment="center" col="1" [text]="option" class="normal-text" [class.passive]="!isSelected(option)"></Label>
         </GridLayout>
     </StackLayout>
     <StackLayout row="1" verticalAlignment="bottom" class="line"></StackLayout>

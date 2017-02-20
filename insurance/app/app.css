@@ -1,8 +1,13 @@
-﻿ActionBar {
+﻿@import 'nativescript-theme-core/css/core.light.css';
+
+ActionBar {
     background-color:white;
 }
  ListView {
      separator-color: white;
+}
+Label {
+    color:black;
 }
 .title {
     color: #5c666f;

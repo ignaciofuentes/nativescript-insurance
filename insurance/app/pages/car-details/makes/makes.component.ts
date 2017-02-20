@@ -4,9 +4,6 @@ import { TitleText } from "../../../shared/header.component";
 
 @Component({
     template: `
-        <ActionBar>
-            <NavigationButton text="" icon="res://ic_arrow_back"></NavigationButton>
-        </ActionBar>
         <car-detail-form
             [firstText]="firstText"
             [options]="options"

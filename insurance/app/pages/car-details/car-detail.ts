@@ -2,6 +2,9 @@ import { Component, Input, Output, ElementRef, EventEmitter, ViewChild } from "@
 import { RouterExtensions } from "nativescript-angular/router";
 @Component({
     template: `
+    <ActionBar>
+        <NavigationButton text="" icon="res://ic_arrow_back" android:visibility="collapse"></NavigationButton>
+    </ActionBar>
     <GridLayout rows="auto, *,auto">
         <header [firstText]="firstText"></header>
         <StackLayout row="1" style="margin-top:38;">
@@ -9,8 +12,8 @@ import { RouterExtensions } from "nativescript-angular/router";
                 <template let-item="item">
                     <GridLayout columns="44, *" height="48">
                         <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-                        <Label width="20" col="0" row="0" text="&#xf05d;" class="font-awesome check" *ngIf="isSelected(item)"></Label>
-                        <Label col="1" [text]="item" style="font-size:20" [class.passive]="!isSelected(item)"></Label>
+                        <Label verticalAlignment="center" width="20" col="0" row="0" text="&#xf05d;" class="font-awesome check" *ngIf="isSelected(item)"></Label>
+                        <Label verticalAlignment="center" col="1" [text]="item" style="margin:10 0 10 0;font-size:20;" [class.passive]="!isSelected(item)"></Label>
                     </GridLayout>
                 </template>
             </ListView>  

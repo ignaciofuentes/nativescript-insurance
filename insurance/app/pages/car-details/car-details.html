@@ -1,23 +1,23 @@
 <ActionBar>
-    <NavigationButton text="" icon="res://ic_arrow_back"></NavigationButton>
+    <NavigationButton text="" icon="res://ic_arrow_back" android:visibility="collapse"></NavigationButton>
 </ActionBar>
 <GridLayout rows="auto, auto, *">
     <header [firstText]="firstText" [secondText]="secondText"></header>
     <StackLayout row="1" style="margin-top:46;">
         <GridLayout columns="*,44" (tap)="onTap('makes')" height="48">
             <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-            <Label width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
-            <Label col="0" [text]="selectedMake || 'Makes'" style="margin-left:44"></Label>
+            <Label verticalAlignment="center" width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
+            <Label verticalAlignment="center" col="0" [text]="selectedMake || 'Makes'" style="margin-left:44"></Label>
         </GridLayout>
          <GridLayout columns="*,44" (tap)="selectedMake ? onTap('models') : return;" height="48">
             <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-            <Label width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
-            <Label col="0" [text]="selectedModel || 'Models'" [class.passive]="!selectedMake" [isEnabled]="false" style="margin-left:44"></Label>
+            <Label verticalAlignment="center" width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
+            <Label verticalAlignment="center" col="0" [text]="selectedModel || 'Models'" [class.passive]="!selectedMake" [isEnabled]="false" style="margin-left:44"></Label>
         </GridLayout>
          <GridLayout columns="*,44" (tap)="selectedModel ? onTap('years') : return;" height="48">
             <StackLayout colSpan="2" verticalAlignment="top" class="line"></StackLayout>      
-            <Label width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
-            <Label col="0" [text]="selectedYear || 'Years'" [class.passive]="!selectedModel" style="margin-left:44"></Label>
+            <Label verticalAlignment="center" width="12" col="1" row="0" text="&#xf105;" class="font-awesome arrow"></Label>
+            <Label verticalAlignment="center" col="0" [text]="selectedYear || 'Years'" [class.passive]="!selectedModel" style="margin-left:44"></Label>
         </GridLayout>
     </StackLayout>
     <StackLayout row="1" verticalAlignment="bottom" class="line"></StackLayout>
