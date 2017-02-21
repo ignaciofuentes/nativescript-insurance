@@ -8,6 +8,9 @@ import { RouterExtensions } from "nativescript-angular/router";
 @Component({
     templateUrl: "pages/estimate/estimate.html",
     styles:[`
+        #estimate Label {
+            color:white;
+        }
         .title {
             margin-top: 56;
             color:white;
@@ -18,7 +21,7 @@ import { RouterExtensions } from "nativescript-angular/router";
         }
         .estimate {
             background-color:#00caab;
-            color:#ffffff;
+            color:white;
         }
     `]
 })

@@ -1,6 +1,4 @@
-﻿@import 'nativescript-theme-core/css/core.light.css';
-
-ActionBar {
+﻿ActionBar {
     background-color:white;
 }
  ListView {
@@ -8,6 +6,7 @@ ActionBar {
 }
 Label {
     color:black;
+    vertical-align:center;
 }
 .title {
     color: #5c666f;
@@ -19,6 +18,8 @@ Label {
 }
 .normal-text {
     font-size:20;
+    background-color: transparent;
+border-color: transparent;
 }
 .line {
     background-color: #DBDBDB;
