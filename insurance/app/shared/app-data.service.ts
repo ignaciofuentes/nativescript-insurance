@@ -26,24 +26,25 @@ export class DataService {
 
   get insuranceTypes():Observable<string[]>{
       return this.http.get("https://api.everlive.com/v1/xf06ngg5dllbzj9c/insuranceTypes")
-              .map(r => r.json().Result.map(item => item.Name));
+              .map(response => response.json().Result.map(item => item.Name));
   }
 
   get makes() : Promise<string[]>{
-    return new Promise<string[]>((r)=>{r(carData.map(t => t.name).sort())});
+    return new Promise<string[]>((resolve)=>{resolve(carData.map(t => t.name).sort())});
   }
 
   get models() : Promise<string[]>{
-    return new Promise<string[]>((r)=>{r(carData.filter(t=>t.name===this.selectedMake)[0].models.map(y=>y.name))});
+    return new Promise<string[]>((resolve) => {
+      resolve(carData.filter(t=>t.name===this.selectedMake)[0].models.map(y=>y.name))});
   }
 
   get years() : Promise<number[]> {
-    return new Promise<number[]>((r)=>{r(carData.filter(t=>t.name===this.selectedMake)[0].models.filter(y=>y.name===this.selectedModel)[0].years)});
+    return new Promise<number[]>((resolve)=>{resolve(carData.filter(t=>t.name===this.selectedMake)[0].models.filter(y=>y.name===this.selectedModel)[0].years)});
   }
 
   get coverages(){
-      return new Promise<string[]>(r => 
-      r(["Bodily injury liability","Property damage liability","Uninsured motorist","Underinsured motorist","Medical expenses","Collision","Comprehensive"]));
+      return new Promise<string[]>(resolve => 
+      resolve(["Bodily injury liability","Property damage liability","Uninsured motorist","Underinsured motorist","Medical expenses","Collision","Comprehensive"]));
   }
 
   get selectedMake(){
