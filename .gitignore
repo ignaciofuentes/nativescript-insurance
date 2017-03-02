@@ -17,3 +17,5 @@ lib
 
 *.tgz
 .DS_Store
+
+insurance/.ab/*
