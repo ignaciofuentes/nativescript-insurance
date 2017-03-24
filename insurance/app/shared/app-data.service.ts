@@ -3,6 +3,7 @@ import {carData} from "./car-data";
 import { Observable, Observer } from "rxjs";
 import 'rxjs/add/operator/map';
 import {Http} from '@angular/http';
+import { InsuranceType } from "../models";
 @Injectable()
 export class DataService {
 
@@ -24,9 +25,9 @@ export class DataService {
       return ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
   }
 
-  get insuranceTypes():Observable<string[]>{
+  get insuranceTypes():Observable<InsuranceType[]>{
       return this.http.get("https://api.everlive.com/v1/xf06ngg5dllbzj9c/insuranceTypes")
-              .map(r => r.json().Result.map(item => item.Name));
+              .map(r => r.json().Result as InsuranceType[]);
   }
 
   get makes() : Promise<string[]>{

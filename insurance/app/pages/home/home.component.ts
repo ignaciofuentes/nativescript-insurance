@@ -5,12 +5,13 @@ import { DataService } from "../../shared/app-data.service";
 import { RouterExtensions } from "nativescript-angular/router";
 import { TitleText } from "../../shared/header.component";
 import { Observable } from "rxjs";
+import { InsuranceType } from "../../models";
 @Component({
     templateUrl: "pages/home/home.html"
 })
 export class HomePageComponent  {
 
-    public options: Observable<string[]>;
+    options: Observable<InsuranceType[]>;
     firstText: TitleText = {text:"What",bold:true};
     secondText: TitleText = {text:"kind of insurance do you need?",bold:false};
 
