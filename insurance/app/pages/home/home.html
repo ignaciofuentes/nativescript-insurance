@@ -9,7 +9,7 @@
     </StackLayout>
     <StackLayout row="1" verticalAlignment="bottom" class="line"></StackLayout>
     <GridLayout row="2">
-        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" (tap)="goToState()" verticalAlignment="bottom" text="Next" class="next-button"></Button>
+        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" [nsRouterLink]="['/state']" verticalAlignment="bottom" text="Next" class="next-button"></Button>
     </GridLayout>
     <progress-bar [step]="1"></progress-bar>
 </GridLayout>

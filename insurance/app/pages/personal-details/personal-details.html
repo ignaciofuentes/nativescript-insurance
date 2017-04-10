@@ -37,7 +37,7 @@
 
 
     <GridLayout row="2">
-        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" (tap)="goToState()" verticalAlignment="bottom" text="Next" class="next-button"></Button>
+        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" [nsRouterLink]="['/coverages']" verticalAlignment="bottom" text="Next" class="next-button"></Button>
     </GridLayout>
     <progress-bar [step]="4"></progress-bar>
 </GridLayout>

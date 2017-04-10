@@ -1,8 +1,6 @@
 import { Component, ElementRef, ViewChild } from "@angular/core";
-import { Page } from "ui/page";
 import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
-import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     templateUrl: "pages/state/state.html"
@@ -14,7 +12,7 @@ export class StatePageComponent {
     firstText: TitleText = {text:"Your",bold:false};
     secondText: TitleText = {text:"state",bold:true};
     
-    constructor(private _router: RouterExtensions,private page: Page, private service: DataService) {
+    constructor(private service: DataService) {
         this.options = service.states;
     }
 
@@ -30,9 +28,5 @@ export class StatePageComponent {
         this.service.selectedState = this.options[args.index];
         let listview = this.lv.nativeElement;
         listview.refresh()
-    }
-    
-    goToCarDetails(){
-        this._router.navigate(["/car-details"]);
     }
 }

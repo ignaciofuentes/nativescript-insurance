@@ -17,7 +17,7 @@
     </StackLayout>
     <StackLayout row="1" verticalAlignment="bottom" class="line"></StackLayout>
     <GridLayout row="2">
-        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" verticalAlignment="bottom" text="Next" class="next-button" (tap)="goToCarDetails()"></Button>
+        <Button [class.disabled]="!canProceed" [isEnabled]="canProceed" verticalAlignment="bottom" text="Next" class="next-button" [nsRouterLink]="['/car-details']"></Button>
     </GridLayout>
     <progress-bar [step]="2"></progress-bar>
 </GridLayout>

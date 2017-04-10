@@ -2,7 +2,6 @@ import { Component, ElementRef, ViewChild } from "@angular/core";
 import { TextField } from "ui/text-field";
 import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
-import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     templateUrl: "pages/personal-details/personal-details.html",
@@ -13,7 +12,7 @@ export class PersonalDetailsComponent {
     firstText: TitleText = {text:"Your",bold:true};
     secondText: TitleText = {text:"details",bold:false};
 
-    constructor(private _router: RouterExtensions, private service: DataService) {
+    constructor(private service: DataService) {
     }
     
     onTap(myParam) {
@@ -41,9 +40,5 @@ export class PersonalDetailsComponent {
     }
     isSelected(gender){
         return this.service.selectedGender == gender;
-    }
-
-    goToState(){      
-        this._router.navigate(["/coverages"]);
     }
 }

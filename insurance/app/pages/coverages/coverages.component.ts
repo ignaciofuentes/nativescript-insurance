@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { DataService } from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
-import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     templateUrl: "pages/coverages/coverages.html",
@@ -12,9 +11,8 @@ export class CoveragesComponent {
     firstText: TitleText = {text:"Coverage",bold:true};
     secondText: TitleText = {text:"type",bold:false};
 
-    constructor(private _router: RouterExtensions, private service: DataService) {
+    constructor(private service: DataService) {
         this.options = this.service.coverages;
-        
     }
 
     get canProceed(){
@@ -41,7 +39,4 @@ export class CoveragesComponent {
         alert("Info");
     }
 
-    goToState(){        
-       this._router.navigate(["/estimate"], {clearHistory:true});
-    }
 }
