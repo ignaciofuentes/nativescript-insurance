@@ -1,6 +1,8 @@
 import {Component } from "@angular/core";
 import {DataService} from "../../shared/app-data.service";
 import { TitleText } from "../../shared/header.component";
+import { RouterExtensions } from "nativescript-angular/router";
+
 
 @Component({
     templateUrl: "pages/estimate/estimate.html",
@@ -29,7 +31,7 @@ export class EstimateComponent  {
 
     estimateValue:Promise<number>;
 
-    constructor(private service: DataService) {
+    constructor(private _router: RouterExtensions,private service: DataService) {
         this.estimateValue = service.getEstimate();
     }
 
