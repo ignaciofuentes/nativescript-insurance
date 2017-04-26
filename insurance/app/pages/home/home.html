@@ -1,4 +1,7 @@
-<GridLayout rows="auto, auto, *" style="margin-top:46">
+<ActionBar>
+    <NavigationButton text="" icon="res://ic_arrow_back" android:visibility="collapse"></NavigationButton>
+</ActionBar>
+<GridLayout rows="auto, auto, *">
     <header [firstText]="firstText" [secondText]="secondText"></header>    
     <StackLayout row="1" style="margin-top:46;">
         <GridLayout columns="44, *" (tap)="onTap(option.Name)" height="48" *ngFor="let option of options | async">
